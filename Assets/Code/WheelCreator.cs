@@ -64,12 +64,12 @@ public class WheelCreator : MonoBehaviour
         }
 
         // create Names
-        WheelOption[] orderNames = createNameArray();
-        if (orderNames.Length == 0)
-            return;
+        WheelOption[] wheelOptions = createNameArray();
+        if (wheelOptions.Length == 0)
+            wheelOptions = BlankOptions();
 
         int i = 0;
-        foreach(WheelOption option in orderNames)
+        foreach(WheelOption option in wheelOptions)
         {
             var segment = Instantiate(wheelSegment, transform.position, Quaternion.identity);
             WheelSegment ws = segment.gameObject.GetComponent<WheelSegment>();
@@ -77,6 +77,7 @@ public class WheelCreator : MonoBehaviour
             ws.SetColour(option.colour);
             segment.transform.rotation = Quaternion.Euler(0,0, 60 * i);
             segment.transform.parent = gameObject.transform;
+            segment.transform.name = $"{option.name} ({i})";
             i++;
         }
     }
@@ -105,6 +106,18 @@ public class WheelCreator : MonoBehaviour
             }
         }
         return optionArray.ToArray();
+    }
+
+    private WheelOption[] BlankOptions()
+    {
+        var blankWheelOptions = new WheelOption[6];
+        blankWheelOptions[0] = new WheelOption("", colours[0]);
+        blankWheelOptions[1] = new WheelOption("", colours[1]);
+        blankWheelOptions[2] = new WheelOption("", colours[0]);
+        blankWheelOptions[3] = new WheelOption("", colours[1]);
+        blankWheelOptions[4] = new WheelOption("", colours[0]);
+        blankWheelOptions[5] = new WheelOption("", colours[1]);
+        return blankWheelOptions;
     }
 }
 
