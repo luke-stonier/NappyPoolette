@@ -958,7 +958,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8322e132a8e000e4e90904129fbcaa83, type: 3}
   m_Name: 
@@ -4301,6 +4301,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Splat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534195583216370607, guid: 0df953b2d214bf043865a60e173a7aa2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7534195584234161633, guid: 0df953b2d214bf043865a60e173a7aa2,
         type: 3}

@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Xml.Serialization;
-using JetBrains.Annotations;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -49,14 +48,21 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        _name1 = PlayerPrefs.GetString("name1");
-        _name2 = PlayerPrefs.GetString("name2");
-        _coins = PlayerPrefs.GetInt("Coins");
-        if (_name1 != "" && _name2 != "")
-            disableGroup(nameModalGroup);
+        try
+        {
+            _name1 = PlayerPrefs.GetString("name1");
+            _name2 = PlayerPrefs.GetString("name2");
+            _coins = PlayerPrefs.GetInt("Coins");
+            if (_name1 != "" && _name2 != "")
+                disableGroup(nameModalGroup);
 
-        setWheelNames();
-        setCoinCount();
+            setWheelNames();
+            //setCoinCount();
+        }
+        catch (Exception ex)
+        {
+            print(ex);
+        }
     }
 
     public void OpenNameModal()
@@ -85,10 +91,17 @@ public class GameManager : MonoBehaviour
 
     private void setWheelNames()
     {
-        string[] names = new string[6];
-        names[0] = _name1;
-        names[1] = _name2;
-        WheelCreator.setNames(names);
+        try
+        {
+            string[] names = new string[6];
+            names[0] = _name1;
+            names[1] = _name2;
+            WheelCreator.setNames(names);
+        }
+        catch (Exception ex)
+        {
+            print(ex);
+        }
     }
 
     public void hideSpinButton()

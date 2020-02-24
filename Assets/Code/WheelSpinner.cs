@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Net;
-using UnityEditorInternal;
-using UnityEngine;
-using UnityEngine.XR.WSA.Persistence;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class WheelSpinner : MonoBehaviour

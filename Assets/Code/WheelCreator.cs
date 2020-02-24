@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class WheelOption
@@ -24,29 +23,30 @@ public class WheelCreator : MonoBehaviour
     public string[] names = new string[MAXNAMES];
     public Color[] colours = new Color[MAXCOLOURS];
 
-    void OnValidate()
+    void Start()
+    {
+        safeArrays();
+        string[] names = new string[0];
+        generateWheel();
+    }
+
+    private void safeArrays()
     {
         if (names.Length != MAXNAMES)
         {
-            Array.Resize(ref names, MAXNAMES);
+            names = new string[MAXNAMES];
         }
 
         if (colours.Length != MAXCOLOURS)
         {
-            Array.Resize(ref colours, MAXCOLOURS);
+            colours = new Color[MAXCOLOURS];
         }
-    }
-
-    void Start()
-    {
-        string[] names = new string[0];
-        generateWheel();
     }
 
     public void setNames(string[] _names)
     {
         names = _names;
-        OnValidate();
+        safeArrays();
         generateWheel();
     }
 
@@ -118,21 +118,5 @@ public class WheelCreator : MonoBehaviour
         blankWheelOptions[4] = new WheelOption("", colours[0]);
         blankWheelOptions[5] = new WheelOption("", colours[1]);
         return blankWheelOptions;
-    }
-}
-
-[CustomEditor(typeof(WheelCreator))]
-public class WheelCreatorEditor : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        DrawDefaultInspector();
-
-        WheelCreator wc = (WheelCreator)target;
-        if (GUILayout.Button("Build"))
-        {
-            string[] names = new string[0];
-            wc.generateWheel();
-        }
     }
 }
