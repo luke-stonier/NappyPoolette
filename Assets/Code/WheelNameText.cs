@@ -1,5 +1,4 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class WheelNameText : MonoBehaviour
 {
@@ -11,20 +10,5 @@ public class WheelNameText : MonoBehaviour
         var renderer = GetComponent<Renderer>();
         renderer.sortingLayerName = MySortingLayer;
         renderer.sortingOrder = MySortingOrderInLayer;
-    }
-}
-
-[CustomEditor(typeof(WheelNameText))]
-public class WheelNameEditor : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        DrawDefaultInspector();
-
-        WheelNameText wnt = (WheelNameText)target;
-        if (GUILayout.Button("Sort"))
-        {
-            wnt.setSort();
-        }
     }
 }
