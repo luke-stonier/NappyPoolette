@@ -54,9 +54,11 @@ public class GameManager : MonoBehaviour
             _name2 = PlayerPrefs.GetString("name2");
             _coins = PlayerPrefs.GetInt("Coins");
             if (_name1 != "" && _name2 != "")
+            {
                 disableGroup(nameModalGroup);
+                setWheelNames();
+            }
 
-            //setWheelNames();
             //setCoinCount();
         }
         catch (Exception ex)

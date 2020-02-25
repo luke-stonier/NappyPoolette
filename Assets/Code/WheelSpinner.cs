@@ -9,6 +9,8 @@ public class WheelSpinner : MonoBehaviour
     private bool hasSpun;
     private Rigidbody2D rb;
     private GameManager gameManager;
+    public AnimationCurve SlowDownCurve;
+    public float slowDownConst;
 
     public float wheelSpeed
     {
@@ -56,6 +58,15 @@ public class WheelSpinner : MonoBehaviour
 
     public void slowSpinner()
     {
-        rb.angularVelocity = 0.1f;
+        rb.angularVelocity = 1;
+    }
+
+    public void hit()
+    {
+        var coef = (1 / rb.angularVelocity) * 100;
+        print(coef);
+        var toReduce = SlowDownCurve.Evaluate(Mathf.Abs(coef)) * slowDownConst;
+        print($"{rb.angularVelocity} reduced by {toReduce}");
+        rb.AddTorque(-toReduce * Time.deltaTime, ForceMode2D.Force);
     }
 }

@@ -11,6 +11,7 @@ public class Clacker : MonoBehaviour
     public WheelCreator builder;
     public AudioSource audio;
     public AudioClip audioClip;
+    public float minimumStoppingForce;
 
     void Awake()
     {
@@ -33,9 +34,10 @@ public class Clacker : MonoBehaviour
         var spinner = wheel.GetComponent<WheelSpinner>();
         if (!spinner.spinning) { return; }
         audio.PlayOneShot(audioClip);
-        if (spinner.wheelSpeed < -10)
+        if (spinner.wheelSpeed < -minimumStoppingForce)
         {
             ApplyForce();
+            spinner.hit();
         }
         else
         {
