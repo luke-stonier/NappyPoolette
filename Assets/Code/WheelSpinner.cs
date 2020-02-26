@@ -64,9 +64,7 @@ public class WheelSpinner : MonoBehaviour
     public void hit()
     {
         var coef = (1 / rb.angularVelocity) * 100;
-        print(coef);
         var toReduce = SlowDownCurve.Evaluate(Mathf.Abs(coef)) * slowDownConst;
-        print($"{rb.angularVelocity} reduced by {toReduce}");
-        rb.AddTorque(-toReduce * Time.deltaTime, ForceMode2D.Force);
+        rb.AddTorque(-toReduce, ForceMode2D.Force);
     }
 }

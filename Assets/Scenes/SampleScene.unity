@@ -652,7 +652,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  slowDownConst: 0.5
+  slowDownConst: -100
 --- !u!50 &256165963
 Rigidbody2D:
   serializedVersion: 4
