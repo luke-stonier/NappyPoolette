@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: adamandluke
   productName: Poos Turn?
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -163,6 +163,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Standalone: com.Company.ProductName
+    iPhone: com.adamandluke.poosturn
   buildNumber:
     iPhone: 1
   AndroidBundleVersionCode: 1
@@ -192,35 +193,35 @@ PlayerSettings:
   uIExitOnSuspend: 0
   uIStatusBarStyle: 0
   iPhoneSplashScreen: {fileID: 0}
-  iPhoneHighResSplashScreen: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd,
+  iPhoneHighResSplashScreen: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e,
     type: 3}
-  iPhoneTallHighResSplashScreen: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd,
+  iPhoneTallHighResSplashScreen: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e,
     type: 3}
-  iPhone47inSplashScreen: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd,
+  iPhone47inSplashScreen: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e,
     type: 3}
-  iPhone55inPortraitSplashScreen: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd,
+  iPhone55inPortraitSplashScreen: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e,
     type: 3}
-  iPhone55inLandscapeSplashScreen: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd,
+  iPhone55inLandscapeSplashScreen: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e,
     type: 3}
-  iPhone58inPortraitSplashScreen: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd,
+  iPhone58inPortraitSplashScreen: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e,
     type: 3}
-  iPhone58inLandscapeSplashScreen: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd,
+  iPhone58inLandscapeSplashScreen: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e,
     type: 3}
-  iPadPortraitSplashScreen: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd,
+  iPadPortraitSplashScreen: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e,
     type: 3}
-  iPadHighResPortraitSplashScreen: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd,
+  iPadHighResPortraitSplashScreen: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e,
     type: 3}
-  iPadLandscapeSplashScreen: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd,
+  iPadLandscapeSplashScreen: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e,
     type: 3}
-  iPadHighResLandscapeSplashScreen: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd,
+  iPadHighResLandscapeSplashScreen: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e,
     type: 3}
-  iPhone65inPortraitSplashScreen: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd,
+  iPhone65inPortraitSplashScreen: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e,
     type: 3}
-  iPhone65inLandscapeSplashScreen: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd,
+  iPhone65inLandscapeSplashScreen: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e,
     type: 3}
-  iPhone61inPortraitSplashScreen: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd,
+  iPhone61inPortraitSplashScreen: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e,
     type: 3}
-  iPhone61inLandscapeSplashScreen: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd,
+  iPhone61inLandscapeSplashScreen: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e,
     type: 3}
   appleTVSplashScreen: {fileID: 0}
   appleTVSplashScreen2x: {fileID: 0}
@@ -293,7 +294,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 77b45f3c0b1540f469f7f766577e8bdd, type: 3}
+      m_Icon: {fileID: 2800000, guid: 59002855f6f2b7245b7e703074bcc11e, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -390,6 +391,103 @@ PlayerSettings:
       m_Height: 36
       m_Kind: 1
       m_SubKind: 
+  - m_BuildTarget: iPhone
+    m_Icons:
+    - m_Textures: []
+      m_Width: 120
+      m_Height: 120
+      m_Kind: 3
+      m_SubKind: iPhone
+    - m_Textures: []
+      m_Width: 80
+      m_Height: 80
+      m_Kind: 3
+      m_SubKind: iPhone
+    - m_Textures: []
+      m_Width: 80
+      m_Height: 80
+      m_Kind: 3
+      m_SubKind: iPad
+    - m_Textures: []
+      m_Width: 40
+      m_Height: 40
+      m_Kind: 3
+      m_SubKind: iPad
+    - m_Textures: []
+      m_Width: 87
+      m_Height: 87
+      m_Kind: 1
+      m_SubKind: iPhone
+    - m_Textures: []
+      m_Width: 58
+      m_Height: 58
+      m_Kind: 1
+      m_SubKind: iPhone
+    - m_Textures: []
+      m_Width: 29
+      m_Height: 29
+      m_Kind: 1
+      m_SubKind: iPhone
+    - m_Textures: []
+      m_Width: 58
+      m_Height: 58
+      m_Kind: 1
+      m_SubKind: iPad
+    - m_Textures: []
+      m_Width: 29
+      m_Height: 29
+      m_Kind: 1
+      m_SubKind: iPad
+    - m_Textures: []
+      m_Width: 60
+      m_Height: 60
+      m_Kind: 2
+      m_SubKind: iPhone
+    - m_Textures: []
+      m_Width: 40
+      m_Height: 40
+      m_Kind: 2
+      m_SubKind: iPhone
+    - m_Textures: []
+      m_Width: 40
+      m_Height: 40
+      m_Kind: 2
+      m_SubKind: iPad
+    - m_Textures: []
+      m_Width: 20
+      m_Height: 20
+      m_Kind: 2
+      m_SubKind: iPad
+    - m_Textures: []
+      m_Width: 1024
+      m_Height: 1024
+      m_Kind: 4
+      m_SubKind: App Store
+    - m_Textures: []
+      m_Width: 180
+      m_Height: 180
+      m_Kind: 0
+      m_SubKind: iPhone
+    - m_Textures: []
+      m_Width: 120
+      m_Height: 120
+      m_Kind: 0
+      m_SubKind: iPhone
+    - m_Textures: []
+      m_Width: 167
+      m_Height: 167
+      m_Kind: 0
+      m_SubKind: iPad
+    - m_Textures: []
+      m_Width: 152
+      m_Height: 152
+      m_Kind: 0
+      m_SubKind: iPad
+    - m_Textures: []
+      m_Width: 76
+      m_Height: 76
+      m_Kind: 0
+      m_SubKind: iPad
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsJobs:
   - m_BuildTarget: MacStandaloneSupport
