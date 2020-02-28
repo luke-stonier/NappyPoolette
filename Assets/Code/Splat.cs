@@ -10,6 +10,7 @@ public class Splat : MonoBehaviour
     public AudioClip audioClip;
     private SpriteRenderer spriteRenderer;
     public List<Color> splatColours = new List<Color>();
+    public bool shouldSetColour = false;
 
     void Start()
     {
@@ -19,7 +20,8 @@ public class Splat : MonoBehaviour
     public void SetName(string name)
     {
         nameText.text = name;
-        spriteRenderer.color = splatColours[Random.Range(0, splatColours.Count - 1)];
+        if (shouldSetColour)
+            spriteRenderer.color = splatColours[Random.Range(0, splatColours.Count - 1)];
         anim.SetTrigger("Splat");
         audio.PlayOneShot(audioClip);
     }
